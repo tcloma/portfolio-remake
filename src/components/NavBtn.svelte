@@ -10,13 +10,13 @@
 	function isCurrentPage(): string {
 		if (name === page) return 'bg-basegray text-white';
 		if (name === 'home' && page === '') return 'bg-basegray text-white';
-		return '';
+		return 'text-gray-400';
 	}
 </script>
 
 <a
 	href={parseRoute()}
-	class={`rounded-md py-2 px-4 text-left font-bold capitalize text-gray-400 ${isCurrentPage()} hover:text-white`}
+	class={`rounded-md py-2 px-4 text-left font-extraboldbold capitalize font-medium ${isCurrentPage()} hover:text-white`}
 >
 	{name}
 </a>

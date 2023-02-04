@@ -5,23 +5,27 @@ import SectionHeader from '../components/SectionHeader.astro';
 
 <!-- IDEA: Bluelight filter based on time -->
 <Layout title='Tyrone Cloma'>
-	<main class='flex flex-col gap-6 h-full'>
+	<main class='flex h-full flex-col gap-6'>
 		<!-- Profile header with avatar photo -->
 		<header class='flex items-center space-x-4'>
 			<img
-				class='h-16 w-16 rounded-full'
+				class='h-16 w-16 rounded-full ring-2 ring-basegray'
 				src='/images/avatar.jpg'
 				alt='rounded avatar'
 			/>
-			<div class='text-lg font-extrabold dark:text-white'>
-				<div>Tyrone Cloma</div>
+			<div class='text-lg dark:text-white'>
+				<div
+					class='bg-gradient-to-r from-primary to-secondary bg-clip-text text-3xl font-bold tracking-wide text-transparent'
+				>
+					Tyrone Cloma
+				</div>
 				<div class='text-sm text-gray-500 dark:text-gray-400'>
 					Full Stack Dev @ NYC
 				</div>
 			</div>
 		</header>
 		<!-- About -->
-        <SectionHeader name='About' />
+		<SectionHeader name='About' />
 		<section id='about'>
 			<p class='mb-4'>
 				Hey! I'm Ty. Avid gamer, music fanatic, TypeScript devotee, ever curious
@@ -43,7 +47,7 @@ import SectionHeader from '../components/SectionHeader.astro';
 			alt='image description'
 		/>
 		<section id='socials' class='flex justify-center gap-6'>
-			<p class='rounded-md border-2 px-6 py-2'>LinkedIn</p>
+			<a href='' class='rounded-md border-2 px-6 py-2'>LinkedIn</a>
 			<p class='rounded-md border-2 px-6 py-2'>Github</p>
 			<p class='rounded-md border-2 px-6 py-2'>Resume</p>
 		</section>
