@@ -1,9 +1,51 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main class="flex min-h-screen flex-col items-center justify-center">
-		<h1 class="text-5xl font-extrabold">Welcome to Portfolio!</h1>
+<!-- IDEA: Bluelight filter based on time -->
+<Layout title='Tyrone Cloma'>
+	<main class='flex flex-col gap-6 h-full'>
+		<!-- Profile header with avatar photo -->
+		<header class='flex items-center space-x-4'>
+			<img
+				class='h-16 w-16 rounded-full'
+				src='/images/avatar.jpg'
+				alt='rounded avatar'
+			/>
+			<div class='text-lg font-extrabold dark:text-white'>
+				<div>Tyrone Cloma</div>
+				<div class='text-sm text-gray-500 dark:text-gray-400'>
+					Full Stack Dev @ NYC
+				</div>
+			</div>
+		</header>
+		<!-- About -->
+        <SectionHeader name='About' />
+		<section id='about'>
+			<p class='mb-4'>
+				Hey! I'm Ty. Avid gamer, music fanatic, TypeScript devotee, ever curious
+				mind and lifelong learner.
+			</p>
+			<p class='mb-4'>
+				I'm currently working freelance while searching for a full-time
+				position. My work involves communicating directly with clients and
+				translating design ideas into functional and reusable code.
+			</p>
+			<p>
+				I value accessibility and developer experience, discovering and
+				mastering tools that aid in those are what excites me as a developer.
+			</p>
+		</section>
+		<img
+			class='h-auto w-full rounded-lg'
+			src='/images/placeholder.jpg'
+			alt='image description'
+		/>
+		<section id='socials' class='flex justify-center gap-6'>
+			<p class='rounded-md border-2 px-6 py-2'>LinkedIn</p>
+			<p class='rounded-md border-2 px-6 py-2'>Github</p>
+			<p class='rounded-md border-2 px-6 py-2'>Resume</p>
+		</section>
 	</main>
 </Layout>
